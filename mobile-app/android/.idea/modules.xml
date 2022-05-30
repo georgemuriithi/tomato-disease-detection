@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mlDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/mlDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/mlDemo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/mlDemo.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/mlDemo.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/mlDemo.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/mlDemo.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/mlDemo.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/mlDemo.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/mlDemo.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/468243882/mlDemo.react-native-config.iml" filepath="$PROJECT_DIR$/.idea/modules/468243882/mlDemo.react-native-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/468243882/mlDemo.react-native-config.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/468243882/mlDemo.react-native-config.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/468243882/mlDemo.react-native-config.main.iml" filepath="$PROJECT_DIR$/.idea/modules/468243882/mlDemo.react-native-config.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/468243882/mlDemo.react-native-config.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/468243882/mlDemo.react-native-config.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-39769176/mlDemo.react-native-image-picker.iml" filepath="$PROJECT_DIR$/.idea/modules/-39769176/mlDemo.react-native-image-picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-39769176/mlDemo.react-native-image-picker.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-39769176/mlDemo.react-native-image-picker.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-39769176/mlDemo.react-native-image-picker.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-39769176/mlDemo.react-native-image-picker.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-39769176/mlDemo.react-native-image-picker.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-39769176/mlDemo.react-native-image-picker.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/991348700/mlDemo.react-native-permissions.iml" filepath="$PROJECT_DIR$/.idea/modules/991348700/mlDemo.react-native-permissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/991348700/mlDemo.react-native-permissions.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/991348700/mlDemo.react-native-permissions.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/991348700/mlDemo.react-native-permissions.main.iml" filepath="$PROJECT_DIR$/.idea/modules/991348700/mlDemo.react-native-permissions.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/991348700/mlDemo.react-native-permissions.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/991348700/mlDemo.react-native-permissions.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1586000270/mlDemo.tflite-react-native.iml" filepath="$PROJECT_DIR$/.idea/modules/-1586000270/mlDemo.tflite-react-native.iml" />
+    </modules>
+  </component>
+</project>
