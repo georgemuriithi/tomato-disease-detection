@@ -8,5 +8,3 @@ The model is then deployed locally using `Docker` and remotely using `Google Clo
 
 ## Mobile Application
 ![Screenshot_20220530_213621(1)](https://user-images.githubusercontent.com/21691211/171020330-ee6b21ff-000a-40f8-a887-9a09cd913671.png)
-
-## Deployment
