@@ -3,5 +3,4 @@
 __pycache__
 .idea
 .ipynb_checkpoints
-mobile-app/node_modules/
-web-page/node_modules/
+node_modules
