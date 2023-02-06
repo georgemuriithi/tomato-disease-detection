@@ -1,7 +1,6 @@
 # importing packages
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-# import tensorflow as tf
 from PIL import Image
 from io import BytesIO
 import numpy as np
@@ -26,12 +25,10 @@ app.add_middleware(
 
 # using version name
 endpoint = 'http://localhost:8605/v1/models/tomato_disease_detection_model/labels/production:predict'
-# using version number (trial)
-# endpoint = 'http://localhost:8605/v1/models/tomato_disease_detection_model/labels/1:predict'
+# using version number
+# endpoint = 'http://localhost:8605/v1/models/tomato_disease_detection_model/labels/2:predict'
 # using latest model
 # endpoint = 'http://localhost:8605/v1/models/tomato_disease_detection_model:predict'
-
-# model = tf.keras.models.load_model('../models/2')  # loading model
 
 # declaring class names
 class_names = ['Bacterial-spot', 'Early-blight', 'Healthy', 'Late-blight',
@@ -41,7 +38,7 @@ class_names = ['Bacterial-spot', 'Early-blight', 'Healthy', 'Late-blight',
 # testing connection
 @app.get('/ping')
 async def ping():  # asynchronous and non-blocking
-    return 'Hello!'
+    return 'Ready!'
 
 
 # predicting image
@@ -53,7 +50,6 @@ async def predict(file: UploadFile = File(...)):
     img_batch = np.expand_dims(img_array, axis=0)  # creating image batch for prediction
 
     # image prediction
-    # pred = model.predict(img_batch)[0]
     json_data = {
         'instances': img_batch.tolist()
     }
@@ -63,8 +59,8 @@ async def predict(file: UploadFile = File(...)):
     pred_class = class_names[np.argmax(pred)]  # getting predicted class
     pred_conf = np.max(pred)  # getting prediction confidence
     return {
-        'predClass': pred_class,
-        'predConf': float(pred_conf)
+        'pred_class': pred_class,
+        'pred_conf': float(pred_conf)
     }
 
 
