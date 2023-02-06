@@ -126,9 +126,9 @@ const App = () => {
       type: response.assets[0].type,
     };
     const res = await getPredication(params);
-    if (res?.data?.predClass) {
-      setLabel(res.data.predClass);
-      setResult(res.data.predConf);
+    if (res?.data?.pred_class) {
+      setLabel(res.data.pred_class);
+      setResult(res.data.pred_conf);
     } else {
       setLabel('Failed to detect');
     }

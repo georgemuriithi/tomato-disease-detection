@@ -205,7 +205,7 @@ export const ImageUpload = () => {
   };
 
   if (data) {
-    confidence = (parseFloat(data.predConf) * 100).toFixed(2);
+    confidence = (parseFloat(data.pred_conf) * 100).toFixed(2);
   }
 
   return (
@@ -258,7 +258,7 @@ export const ImageUpload = () => {
                     <TableBody className={classes.tableBody}>
                       <TableRow className={classes.tableRow}>
                         <TableCell component="th" scope="row" className={classes.tableCell}>
-                          {data.predClass}
+                          {data.pred_class}
                         </TableCell>
                         <TableCell align="right" className={classes.tableCell}>{confidence}%</TableCell>
                       </TableRow>

@@ -41,6 +41,6 @@ def predict(request):
     pred_conf = round(100 * np.max(pred[0]), 2)  # getting prediction confidence
 
     return {
-        'predClass': pred_class,
-        'predConf': pred_conf
+        'pred_class': pred_class,
+        'pred_conf': pred_conf
     }
