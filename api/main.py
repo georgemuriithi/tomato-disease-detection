@@ -9,7 +9,7 @@ import uvicorn
 
 app = FastAPI()  # creating FastAPI instance
 
-# allowing requests from port 3000 for React UI
+# allowing requests from port 3000 for React
 origins = [
     'http://localhost',
     'http://localhost:3000'
