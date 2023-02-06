@@ -1,5 +1,5 @@
 fastapi
-pillow
+Pillow
 numpy
 uvicorn
 python-multipart
