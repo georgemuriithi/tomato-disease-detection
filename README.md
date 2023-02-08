@@ -23,7 +23,7 @@ Farmers face economic losses for failing to detect diseases in their tomato plan
 A mobile app is developed to help farmers identify tomato diseases by taking pictures of tomato leaves. This is simple and accurate. The app uses a CNN model trained for image classification to identify tomato diseases through tomato leaves.
 
 - Data Collection: <a href="https://www.kaggle.com/datasets/mohitsingh1804/plantvillage">Kaggle PlantVillage Dataset</a>
-- <a href="https://github.com/georgemuriithi/tomato-disease-detection/blob/main/Tomato-Disease-Detection-Model.ipynb">Model Building</a>: Tensorflow, CNN, Data Augmentation
+- <a href="https://github.com/georgemuriithi/tomato-disease-detection/blob/main/Tomato-Disease-Detection-Model.ipynb">Model Building</a>: TensorFlow, CNN, Data Augmentation
 - MLOps: TensorFlow Serving, Docker
 - Backend: FastAPI
 - Frontend: React Native, React JS
@@ -37,3 +37,17 @@ A mobile app is developed to help farmers identify tomato diseases by taking pic
 <p align="center">
   <img src="https://user-images.githubusercontent.com/21691211/217465060-e69f8ffa-4027-4ad8-a5ae-f314599f193c.png">
 </p>
+
+## Running Local API
+```
+cd apis/local
+pip install -r requirements.txt
+```
+- <a href="https://docs.docker.com/get-docker/">Install Docker</a>
+- Get docker image for <a href="https://www.tensorflow.org/tfx/serving/docker">TensorFlow Serving</a>
+- Run tensorflow serving docker image
+- Serve model by running the following command in Windows PowerShell. Change the file path accordingly and add the appropriate config file at the end of the command. To serve latest model, add ```all-models.config```. To serve target model, add ```target-models.config```.
+```
+docker run -t --rm -p 8605:8605 -v C:\Users\User\tomato-disease-detection:/tomato-disease-detection tensorflow/serving --rest_api_port=8605 --allow_version_labels_for_unavailable_models --model_config_file=/tomato-disease-detection/config-files/
+```
+- Change the endpoint in ```main.py``` accordingly, then run the file using an IDE.
