@@ -26,7 +26,7 @@ A mobile app is developed to help farmers identify tomato diseases by taking pic
 - Deployment: GCP (Google Cloud Platform), GCF (Google Cloud Functions)
 
 ### Model
-<a href="https://drive.google.com/file/d/1JZa78UbwNB613LauIer-Cqa-xtM3cV3d/view?usp=sharing">
+<a href="https://colab.research.google.com/drive/1-4BZ6qLznewBHl65NsbmWRswJijglM5w?usp=sharing">
   <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
