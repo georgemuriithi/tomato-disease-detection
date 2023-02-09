@@ -77,11 +77,12 @@ npm start
 ### Setting up GCP
 - Create <a href="https://console.cloud.google.com/">GCP account</a>
 - Create <a href="https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-project">GCP project</a>
-- Create <a href="https://cloud.google.com/storage/docs/creating-buckets">GCP bucket</a> and name it ```tf-models-1```
-- Create ```models``` folder in ```tf-models-1``` GCP bucket
-- Upload ```tomato-disease-detection-model.h5``` model from ```models``` folder in the repo to ```models``` folder in ```tf-models-1``` GCP bucket
+- Create <a href="https://cloud.google.com/storage/docs/creating-buckets">GCP bucket</a>
+- Create ```models``` folder in the GCP bucket
+- Upload ```tomato-disease-detection-model.h5``` model from ```models``` folder in the repo to ```models``` folder in the GCP bucket
 
 ### Deploying GCF
+- Rename GCP bucket name in ```apis/gcf/main.py``` accordingly
 - <a href="https://cloud.google.com/sdk/docs/install-sdk">Install Google Cloud CLI</a>
 - <a href="https://cloud.google.com/sdk/docs/initializing">Initialize Google Cloud CLI</a>
 - Deploy ```predict``` GCF using Google Cloud SDK Shell by running the following commands. Change the Python version and Project ID accordingly.
