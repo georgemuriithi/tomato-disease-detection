@@ -38,16 +38,37 @@ A mobile app is developed to help farmers identify tomato diseases by taking pic
   <img src="https://user-images.githubusercontent.com/21691211/217465060-e69f8ffa-4027-4ad8-a5ae-f314599f193c.png">
 </p>
 
-## Running Local API
-```
-cd apis/local
-pip install -r requirements.txt
-```
+## Running Project Locally
+### Local API
+- ```cd apis/local```
+- ```pip install -r requirements.txt```
 - <a href="https://docs.docker.com/get-docker/">Install Docker</a>
 - Get docker image for <a href="https://www.tensorflow.org/tfx/serving/docker">TensorFlow Serving</a>
 - Run tensorflow serving docker image
-- Serve model by running the following command in Windows PowerShell. Change the file path accordingly and add the appropriate config file at the end of the command. To serve latest model, add ```all-models.config```. To serve target model, add ```target-models.config```.
+- Serve model by running the following command. Change the file path accordingly and add the appropriate config file at the end of the command. To serve latest model, add ```all-models.config```. To serve target model, add ```target-models.config```.
 ```
 docker run -t --rm -p 8605:8605 -v C:\Users\User\tomato-disease-detection:/tomato-disease-detection tensorflow/serving --rest_api_port=8605 --allow_version_labels_for_unavailable_models --model_config_file=/tomato-disease-detection/config-files/
 ```
-- Change the endpoint in ```main.py``` accordingly, then run the file using an IDE.
+- Change the endpoint in ```main.py``` accordingly, then run the file using an IDE or the following command:
+```
+uvicorn main:app --reload --host 0.0.0.0
+```
+
+### Mobile App
+- ```cd mobile-app```
+- ```yarn install```
+- For macOS users only:
+```
+cd ios
+pod install
+cd ../
+```
+- <a href="https://reactnative.dev/docs/environment-setup">Set up an Emulator</a>
+- Run the app using ```npm run android``` or ```npm run ios```
+
+### Web Page
+```
+cd web-page
+npm install
+npm start
+```
