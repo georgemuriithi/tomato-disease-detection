@@ -45,7 +45,7 @@ A mobile app is developed to help farmers identify tomato diseases by taking pic
 - <a href="https://docs.docker.com/get-docker/">Install Docker</a>
 - Get docker image for <a href="https://www.tensorflow.org/tfx/serving/docker">TensorFlow Serving</a>
 - Run tensorflow serving docker image
-- Serve a model by running the following command. Change the file path accordingly and add the appropriate config file at the end of the command. To serve latest model, add ```all-models.config```. To serve target model, add ```target-models.config```.
+- Serve a model by running the following command. Change the file path accordingly and add the appropriate config file at the end of the command. To serve the latest model, add ```all-models.config```. To serve a target model, add ```target-models.config```.
 ```
 docker run -t --rm -p 8605:8605 -v C:\Users\User\tomato-disease-detection:/tomato-disease-detection tensorflow/serving --rest_api_port=8605 --allow_version_labels_for_unavailable_models --model_config_file=/tomato-disease-detection/config-files/
 ```
