@@ -49,7 +49,7 @@ A mobile app is developed to help farmers identify tomato diseases by taking pic
 ```
 docker run -t --rm -p 8605:8605 -v C:\Users\User\tomato-disease-detection:/tomato-disease-detection tensorflow/serving --rest_api_port=8605 --allow_version_labels_for_unavailable_models --model_config_file=/tomato-disease-detection/config-files/
 ```
-- Change the endpoint in ```main.py``` accordingly, then run the file using an IDE or the following command:
+- Change the endpoint in ```apis/local/main.py``` accordingly, then run the file using an IDE or the following command:
 ```
 uvicorn main:app --reload --host 0.0.0.0
 ```
