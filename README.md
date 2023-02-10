@@ -29,7 +29,7 @@ A mobile app is developed to help farmers identify tomato diseases by taking pic
 - Frontend: React Native, React JS
 - Deployment: GCP (Google Cloud Platform), GCF (Google Cloud Functions)
 
-### Model
+### Model Building & Performance
 <a href="https://colab.research.google.com/drive/1-4BZ6qLznewBHl65NsbmWRswJijglM5w?usp=sharing">
   <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
@@ -96,3 +96,7 @@ gcloud functions deploy predict --runtime python310 --trigger-http --memory 512 
 ### Running Mobile App & Web Page
 - Change the url in the ```.env``` files to ```httpsTrigger url```
 - Run accordingly
+- Alternatively, install ```mlDemo.apk``` on an Android device and run the mobile app
+
+## Credits
+@codebasics
