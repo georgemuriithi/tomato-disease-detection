@@ -96,7 +96,7 @@ gcloud functions deploy predict --runtime python310 --trigger-http --memory 512 
 ### Running Mobile App & Web Page
 - Change the url in the ```.env``` files to ```httpsTrigger url```
 - Run accordingly
-- Alternatively, install ```mlDemo.apk``` on an Android device and run the mobile app
+- Alternatively, install ```app-debug.apk``` from ```mobile-app/android/app/build/outputs/apk/debug``` on an Android device and run the Android mobile app
 
 ## Credits
 @codebasics
