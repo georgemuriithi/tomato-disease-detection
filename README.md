@@ -4,7 +4,7 @@
     <img alt="License" src="https://img.shields.io/github/license/georgemuriithi/tomato-disease-detection.svg?color=blue&cachedrop">
 </a>
 
-This is an end to end project in the agricultural domain. A CNN (Convolutional Neural Network) model is trained to detect whether a tomato plant has a particular disease by using a picture of its leaf. The model can accessed from a mobile app or a web page.
+This is an end-to-end project in the agricultural domain. A Convolutional Neural Network (CNN) model is trained to detect whether a tomato plant has a particular disease by using a picture of its leaf. The model can be accessed from a mobile application or a web page.
 
 ## Mobile App
 <p align="center">
