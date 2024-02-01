@@ -17,19 +17,19 @@ This is an end-to-end project in the agricultural domain. A Convolutional Neural
 </p>
 
 ## Problem Description
-Farmers face economic losses for failing to detect diseases in their tomato plants or giving them wrong treatments after making incorrect assumptions. It is also an additional cost to hire experts to investigate tomato plants and identify diseases.
+Farmers face economic losses for failing to identify diseases in their tomato plants or giving them wrong treatments after making incorrect assumptions. It is also an additional cost to hire experts to inspect tomato plants and identify diseases.
 
 ## Solution Approach
-A mobile app is developed to help farmers identify tomato diseases by taking pictures of tomato leaves. This is simple and accurate. The app uses a CNN model trained for image classification to identify tomato diseases through tomato leaves.
+A mobile app is developed to help farmers identify tomato diseases by taking pictures of the leaves. This is simple and accurate. The app uses a CNN model trained for image classification.
 
 - Data Collection: <a href="https://www.kaggle.com/datasets/mohitsingh1804/plantvillage">Kaggle PlantVillage Dataset</a>
-- <a href="https://github.com/georgemuriithi/tomato-disease-detection/blob/main/Tomato-Disease-Detection-Model.ipynb">Model Building</a>: TensorFlow, CNN, Data Augmentation
+- <a href="https://github.com/georgemuriithi/tomato-disease-detection/blob/main/Tomato-Disease-Detection-Model.ipynb">Model</a>: TensorFlow, CNN
 - MLOps: TensorFlow Serving, Docker
 - Backend: FastAPI
 - Frontend: React Native, React JS
-- Deployment: GCP (Google Cloud Platform), GCF (Google Cloud Functions)
+- Deployment: GCP (Google Cloud Platform)
 
-### Model Building & Performance
+### Model
 <a href="https://colab.research.google.com/drive/1-4BZ6qLznewBHl65NsbmWRswJijglM5w?usp=sharing">
   <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
@@ -38,18 +38,17 @@ A mobile app is developed to help farmers identify tomato diseases by taking pic
   <img src="https://user-images.githubusercontent.com/21691211/217465060-e69f8ffa-4027-4ad8-a5ae-f314599f193c.png">
 </p>
 
-## Running Project Locally
+## Running Locally
 ### Setting up Local API
 - ```cd apis/local```
 - ```pip install -r requirements.txt```
 - <a href="https://docs.docker.com/get-docker/">Install Docker</a>
 - Get docker image for <a href="https://www.tensorflow.org/tfx/serving/docker">TensorFlow Serving</a>
-- Run tensorflow serving docker image
-- Serve a model by running the following command. Change the file path accordingly and add the appropriate config file at the end of the command. To serve the latest model, add ```all-models.config```. To serve a target model, add ```target-models.config```.
+- Serve a model by running the TF serving container. Change the folder path accordingly and add the appropriate config file at the end of the command. To serve the latest model, add ```all-models.config```. To serve a target model, add ```target-models.config```.
 ```
 docker run -t --rm -p 8605:8605 -v C:\Users\User\tomato-disease-detection:/tomato-disease-detection tensorflow/serving --rest_api_port=8605 --allow_version_labels_for_unavailable_models --model_config_file=/tomato-disease-detection/config-files/
 ```
-- Change the endpoint in ```apis/local/main.py``` accordingly, then run the file using an IDE or the following command:
+- Change the endpoint in ```apis/local/main.py``` accordingly, then run the file in an IDE or using the following command:
 ```
 uvicorn main:app --reload --host 0.0.0.0
 ```
@@ -73,7 +72,7 @@ npm install
 npm start
 ```
 
-## Running Project using GCP
+## Running on GCP
 ### Setting up GCP
 - Create <a href="https://console.cloud.google.com/">GCP account</a>
 - Create <a href="https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-project">GCP project</a>
@@ -81,7 +80,7 @@ npm start
 - Create ```models``` folder in the GCP bucket
 - Upload ```tomato-disease-detection-model.h5``` model from ```models``` folder in the repo to ```models``` folder in the GCP bucket
 
-### Deploying GCF
+### Deploying GCF (Google Cloud Functions)
 - Rename GCP bucket name in ```apis/gcf/main.py``` accordingly
 - <a href="https://cloud.google.com/sdk/docs/install-sdk">Install Google Cloud CLI</a>
 - <a href="https://cloud.google.com/sdk/docs/initializing">Initialize Google Cloud CLI</a>
@@ -96,7 +95,7 @@ gcloud functions deploy predict --runtime python310 --trigger-http --memory 512 
 ### Running Mobile App & Web Page
 - Change the url in the ```.env``` files to ```httpsTrigger url```
 - Run accordingly
-- Alternatively, install ```app-debug.apk``` from ```mobile-app/android/app/build/outputs/apk/debug``` on an Android device and run the Android mobile app
+- Alternatively, install ```app-debug.apk``` from ```mobile-app/android/app/build/outputs/apk/debug``` onto an Android device and run the Android mobile app
 
 ## Credits
 @codebasics
